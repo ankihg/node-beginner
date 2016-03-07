@@ -8,7 +8,7 @@ function start(route, handle) {
 
     console.log('Request for ' + pathname + ' received.');
 
-    request.setEncoding('utf-8');
+    /*request.setEncoding('utf-8');
 
     request.addListener('data', function(postDataChuck) {
       postData += postDataChuck;
@@ -17,9 +17,9 @@ function start(route, handle) {
 
     request.addListener('end', function() {
       route(handle, pathname, response, postData);
-    });
+    });*/
 
-    // route(handle, pathname, response);
+    route(handle, pathname, response, request);
 
   }).listen(8888);
 
